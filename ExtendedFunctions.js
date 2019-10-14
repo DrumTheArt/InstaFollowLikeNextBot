@@ -21,6 +21,23 @@ nextButton = document.querySelector(rawNext);
 var allButtonsFromPage = document.getElementsByTagName('button');
 var likeButtonFromPage = 'button.' + allButtonsFromPage[2].className.replace(" ", ".").trim();
 
+//Find the follow button
+var followButton = null;
+var followButtonFromPage = "";
+
+for(var i = 0; i<allButtonsFromPage.length; i++){
+
+      if(allButtonsFromPage[i].textContent === 'Follow'){
+        
+        followButton = allButtonsFromPage[i].className;
+        
+    }
+}
+
+followButton = followButton.replace(/ +/g, " ");
+
+console.log(followButton);
+
 
 function likeAndGoNextRandomising(randomTimeToLike) {
     
