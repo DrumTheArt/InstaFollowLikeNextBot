@@ -64,9 +64,18 @@ function likeAndGoNextRandomising(randomTimeToLike) {
 
     if(randomShouldLike){
 
-        like.click();
-        follow.click();
-        numberOfLikesAlready++;
+
+	if (like != null) { 
+        		
+		like.click();
+	}      
+  
+	if (follow != null) { 
+        		
+		follow.click();
+	}      
+  
+numberOfLikesAlready++;
         numberOfNewFollowings++;
     
     } else {
@@ -82,7 +91,7 @@ function likeAndGoNextRandomising(randomTimeToLike) {
     console.log('Sum of dislikes already: ' + numberOfDislikesAlready);
     console.log('Sum of new followings:  ' + numberOfNewFollowings);
     console.log('The next post is coming in: '+ randomTimeToLike +' miliseconds\n');
-    console.log('______________');
+    console.log('__');
     
 }
 
